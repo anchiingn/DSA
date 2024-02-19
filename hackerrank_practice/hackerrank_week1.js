@@ -19,9 +19,9 @@ function plusMinus(arr) {
     const n = negative / arr.length;
     const z = zero / arr.lenght;
     
-    console.log(p);
-    console.log(n);
-    console.log(z);
+    // console.log(p);
+    // console.log(n);
+    // console.log(z);
 }
 
 // console.log(plusMinus([-4, 3, -9, 0, 4, 1]))
@@ -148,24 +148,9 @@ function processData(input) {
     return words
 }
 
-console.log(processData('C;V;can of coke'))
+// console.log(processData('C;V;can of coke'))
 // console.log(processData('S;M;sweatTea()'))
 // console.log(processData('S;C;LargeSoftwareBook'))
 // console.log(processData('C;C;mirror'))
 
 
-function divisibleSumPairs(n, k, ar) {
-    let count = 0
-
-    // for (let i = 0; i < n; i++) {
-    //     for (let j = i + 1; j < n; j++) {
-    //         if ((ar[i] + ar[j]) % k === 0) {
-    //             count++;
-    //         }
-    //     }
-    // }
-
-    return count
-}
-
-console.log(divisibleSumPairs(6,3,[1,3,2,6,1,2]))
