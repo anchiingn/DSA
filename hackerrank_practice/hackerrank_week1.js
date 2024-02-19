@@ -113,18 +113,59 @@ function processData(input) {
         }
     }
 
-    if (str[0] === 'S') {
+    if (str[1] === 'C') {
+        if (str[0] !== 'S') {
+            const wordArr = str[2].split(' ');
+            for (let i = 0; i < wordArr.length; i++) {
+                words.push( wordArr[i].charAt(0).toUpperCase() + wordArr[i].slice(1))
+            }
+            words =  words.join('')
+            return words
+        }
+    }
+    
+    if (str[0] === 'S' ) {
         for (let i = 0; i < str[2].length; i++) {
             if (str[2][i] === str[2][i].toUpperCase()) {
                 words = (str[2].split(/(?=[A-Z])/)).join(' ').toLowerCase();
             }
         }
+
+    }
+
+    
+    if (str[0] === 'C' ) {
+        const wordArr = str[2].split(' ')
+        const firstWord = wordArr.slice(0,1).join()
+        for (let i = 1; i < wordArr.length; i++) {
+            words.push( wordArr[i].charAt(0).toUpperCase() + wordArr[i].slice(1))
+        }
+        words.unshift(firstWord);
+        words =  words.join('')
     }
 
 
     return words
 }
 
+console.log(processData('C;V;can of coke'))
+// console.log(processData('S;M;sweatTea()'))
+// console.log(processData('S;C;LargeSoftwareBook'))
+// console.log(processData('C;C;mirror'))
 
-console.log(processData('S;M;plasticCup()'))
-console.log(processData('S;M;plasticCup'))
+
+function divisibleSumPairs(n, k, ar) {
+    let count = 0
+
+    // for (let i = 0; i < n; i++) {
+    //     for (let j = i + 1; j < n; j++) {
+    //         if ((ar[i] + ar[j]) % k === 0) {
+    //             count++;
+    //         }
+    //     }
+    // }
+
+    return count
+}
+
+console.log(divisibleSumPairs(6,3,[1,3,2,6,1,2]))
