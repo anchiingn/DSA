@@ -49,12 +49,15 @@ function marsExploration(s) {
 
 function pangrams(s) {
     // Write your code here
-    const alphabet = 'abcdefghijklmnopqrstuvwyz'
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
     const lowercase = s.toLowerCase()
-    const eachLetter = lowercase.split('')
-    for (let letter of eachLetter ) {
-        console.log(letter)
+    //iterate each char to check if the sentence have every char
+    for (let char of alphabet ) {
+        if(!lowercase.includes(char)) {
+            return false
+        }
     }
+    return true
 }
 
-console.log(pangrams('We promptly judged antique ivory buckles for the next prize'))
+console.log(pangrams('We promptly judged antique ivory buckles for the  prize'))
