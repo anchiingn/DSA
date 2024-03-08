@@ -51,7 +51,6 @@ function miniMaxSum(arr) {
 function timeConversion(s) {
     // Write your code here
     let newTime = s.split(':');
-    console.log(newTime)
     let hour = newTime[0];
     let min = newTime[1];
     let sec = newTime[2].slice(0,2);
