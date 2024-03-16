@@ -102,3 +102,12 @@ function divisibleSumPairs(n, k, ar) {
     // Write your code here
 
 }
+
+
+/*
+    - Find if 
+*/
+function pageCount(n, p) {
+    // Write your code here
+
+}
