@@ -48,7 +48,29 @@ function diagonalDifference(arr) {
     return Math.abs(diagonalLeftToRight - diagonalRightToLeft)
 }
 
-let ar = [[11, 2, 4],
-          [4, 5, 6,],
-          [10, 8, -12]]
-console.log(diagonalDifference(ar))
+// let ar = [[11, 2, 4],
+//           [4, 5, 6,],
+//           [10, 8, -12]]
+// console.log(diagonalDifference(ar))
+
+
+
+/*
+    - Find how many tallest candle
+    - look for the biggest number of the candel height
+    - if that the number is the tallest then count to see how many there are
+*/
+function birthdayCakeCandles(candles) {
+   
+
+}
+
+
+
+/*
+    - Count how many apples and orange landed at the inclusive range
+*/
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    // Write your code here
+
+}
