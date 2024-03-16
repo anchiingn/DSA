@@ -83,3 +83,12 @@ function kangaroo(x1, v1, x2, v2) {
     // Write your code here
 
 }
+
+
+/*
+    - Find if 
+*/
+function getTotalX(a, b) {
+    // Write your code here
+
+}
