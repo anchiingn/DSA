@@ -74,3 +74,12 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
     // Write your code here
 
 }
+
+
+/*
+    - Find if 
+*/
+function kangaroo(x1, v1, x2, v2) {
+    // Write your code here
+
+}
