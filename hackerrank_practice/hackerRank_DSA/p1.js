@@ -92,3 +92,13 @@ function getTotalX(a, b) {
     // Write your code here
 
 }
+
+
+
+/*
+    - Find if 
+*/
+function divisibleSumPairs(n, k, ar) {
+    // Write your code here
+
+}
