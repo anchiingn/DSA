@@ -98,20 +98,28 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
 
 }
 
-console.log(countApplesAndOranges(7,11,5,15,[2,-2,1],[5,-6]))
+// console.log(countApplesAndOranges(7,11,5,15,[2,-2,1],[5,-6]))
 
 
 /*
-    - Find if 
+    - Find if the two kangaroo jump to the same location
 */
 function kangaroo(x1, v1, x2, v2) {
     // Write your code here
+    if (v1 <= v2)
+        return "NO"
+    else {
+        if (((x2 - x1) % (v1 - v2)) == 0)
+            return "YES"
+        else
+            return "NO"
+    }
 
 }
-
+// console.log(kangaroo(0,2,5,3))
 
 /*
-    - Find if 
+    - 
 */
 function getTotalX(a, b) {
     // Write your code here
