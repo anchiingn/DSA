@@ -74,17 +74,31 @@ function birthdayCakeCandles(candles) {
     return count;
 }
 
+// console.log(birthdayCakeCandles([18, 90, 90, 13, 90, 75, 90, 8, 90, 43]))
 
 
-console.log(birthdayCakeCandles([18, 90, 90, 13, 90, 75, 90, 8, 90, 43]))
 
 /*
     - Count how many apples and orange landed at the inclusive range
 */
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
     // Write your code here
+    let apple = 0;
+    let orange = 0;
+    for (let i = 0; i < apples.length || i < oranges.length; i++) {
+        if (a + apples[i] >= s && a + apples[i]  <= t) {
+            apple++
+        }
+        
+        if ( b + oranges[i] >= s && b + oranges[i]  <= t) {
+            orange++
+        }
+    }
+    console.log(apple,orange)
 
 }
+
+console.log(countApplesAndOranges(7,11,5,15,[2,-2,1],[5,-6]))
 
 
 /*
