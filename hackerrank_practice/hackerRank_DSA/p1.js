@@ -61,11 +61,22 @@ function diagonalDifference(arr) {
     - if that the number is the tallest then count to see how many there are
 */
 function birthdayCakeCandles(candles) {
-   
-
+    let tallest = candles[0];
+    let count = 0;
+    for (let i = 0; i < candles.length; i++) {
+        if (tallest < candles[i]) {
+            tallest = candles[i];
+            count = 1; // Reset count to 1 when encountering a new tallest candle
+        } else if (tallest === candles[i]) { //if it not smaller to the rest of the num but equal to than count one 
+            count++;
+        }
+    }
+    return count;
 }
 
 
+
+console.log(birthdayCakeCandles([18, 90, 90, 13, 90, 75, 90, 8, 90, 43]))
 
 /*
     - Count how many apples and orange landed at the inclusive range
