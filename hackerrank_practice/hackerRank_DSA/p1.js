@@ -118,6 +118,28 @@ function kangaroo(x1, v1, x2, v2) {
 }
 // console.log(kangaroo(0,2,5,3))
 
+
+
+function miniMaxSum(arr) {
+    // Write your code here
+    let max = arr[0];
+    let min = arr[0];
+    let t = 0;
+    let i =0;
+    while (i< arr.length) {
+        if (max < arr[i]) {
+            max = arr[i]
+        }
+        if (min > arr[i]) min = arr[i];
+        t += arr[i]
+        i++
+    }
+    console.log(t -max, t - min)
+    
+}
+// console.log(miniMaxSum([1,2,3,4,5]))
+
+
 /*
     - 
 */
