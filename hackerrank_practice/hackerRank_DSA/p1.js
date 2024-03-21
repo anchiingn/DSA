@@ -140,6 +140,48 @@ function miniMaxSum(arr) {
 // console.log(miniMaxSum([1,2,3,4,5]))
 
 
+/*
+    - find if B correctly split the bill to A, find how mnuch B own A.
+
+    - bill: an array of integers representing the cost of each item ordered
+      k: an integer representing the zero-based index of the item Anna doesn't eat
+      b: the amount of money that Anna contributed to the bill
+
+    - for example if this is the cost of each item ordered [3, 10, 2, 9]
+
+        - if A don't eat item at index 1 (k), which the cost is [10], then A don't have to pay for this.
+        - add all the remaining cost together A share with B, so it be [3 + 2 + 9] = 14
+        - the split of the bill will be half of the total, so 14 / 2 = 7
+        - but B charged A is 12 (b), take what B charge minus the split bill, so it is 12 - 7 = 7
+            - this make B overcharged A, and B need to refund A the overcharged
+            - but if what B charge minus the split bill equal to 0, then B did not overcharged A, so print 'Bon Appetit'
+
+*/
+function bonAppetit(bill, k, b) {
+    // const item =  bill.splice(k, 1)
+ 
+    // let total = 0;
+    // for (let i = 0; i < bill.length; i++) {
+    //     total += bill[i]
+    // }
+    // let split = total/2
+    // if (b - split === 0) {
+    //     return 'Bon Appetit'
+    // }
+    // return b - split
 
 
+    const item = bill.filter(i => i != bill[k])
+    
+    const total = item.reduce((a,c) => (a+c),0)
+
+    const split = total /2
+
+    if (b - split === 0) {
+        return 'Bon Appetit'
+    }
+    return b - split
+}
+
+console.log(bonAppetit([ 72, 53, 60, 66, 90, 62, 12, 31, 36, 94], 6, 288))
 
