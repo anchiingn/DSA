@@ -183,5 +183,5 @@ function bonAppetit(bill, k, b) {
     return b - split
 }
 
-console.log(bonAppetit([ 72, 53, 60, 66, 90, 62, 12, 31, 36, 94], 6, 288))
+// console.log(bonAppetit([ 72, 53, 60, 66, 90, 62, 12, 31, 36, 94], 6, 288))
 
