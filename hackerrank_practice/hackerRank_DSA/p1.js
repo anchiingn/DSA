@@ -140,29 +140,6 @@ function miniMaxSum(arr) {
 // console.log(miniMaxSum([1,2,3,4,5]))
 
 
-/*
-    - 
-*/
-function getTotalX(a, b) {
-    // Write your code here
-
-}
 
 
 
-/*
-    - Find if 
-*/
-function divisibleSumPairs(n, k, ar) {
-    // Write your code here
-
-}
-
-
-/*
-    - Find if 
-*/
-function pageCount(n, p) {
-    // Write your code here
-
-}
