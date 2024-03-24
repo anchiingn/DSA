@@ -20,5 +20,29 @@ function sockMerchant(n, ar) {
     const total = matchedPair.filter(sock => sock != null)
     return total.length/2
 }
+// console.log(sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20]))
 
-console.log(sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20]))
+
+function breakingRecords(scores) {
+    // Write your code here
+    let highest = scores[0];
+    let lowest = scores[0];
+    let h = 0;
+    let l = 0;
+
+    for (let i = 0; i < scores.length; i++) {
+        if (highest < scores[i]) {
+            highest = scores[i];
+            h++
+        }
+
+        if (lowest > scores[i]) {
+            lowest = scores[i];
+            l++
+        }
+
+    }
+    return [h,l]
+
+}
+// console.log(breakingRecords([10,5,20,20,4,5,2,25,1]))
