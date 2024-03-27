@@ -46,3 +46,9 @@ function breakingRecords(scores) {
 
 }
 // console.log(breakingRecords([10,5,20,20,4,5,2,25,1]))
+
+
+function birthday(s, d, m) {
+    // Write your code here
+
+}
