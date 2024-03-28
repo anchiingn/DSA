@@ -44,16 +44,16 @@ var plusOne = function (digits) {
     for (let i = digits.length - 1; i >= 0; i--) {
         if (digits[i] < 9) { // if the last num is less than 9 then add 1 and return
             digits[i]++      // if the last num is not less than 9 then it will countinue with the next number
-            break
+            return digits
         }
         else {               // if it is not less than 9 then the last num will be zero
             digits[i] = 0
-            digits.unshift(1)
         }
         
     }
     
-
+    
+    digits.unshift(1)
     return digits
     
 };
@@ -61,4 +61,25 @@ var plusOne = function (digits) {
 // console.log(plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,9]))
 // console.log(plusOne([0]))
 // console.log(plusOne([9,9]))
+
+
+var romanToInt = function(s) {
+    let symbols ={
+        'I' : 1,
+        'V' : 5,
+        'X' : 10,
+        'L' : 50,
+        'C' : 100,
+        'D' : 500,
+        'M' : 1000
+    }
+    let output = 0
+    for (let i = 0; i < s.length; i++) {
+       
+        output += symbols[s[i]]
+    }
+    return output
+};
+
+console.log(romanToInt('III'))
 
