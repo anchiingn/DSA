@@ -50,8 +50,43 @@ function breakingRecords(scores) {
 
 function birthday(s, d, m) {
     // Write your code here
-
+    let count = 0;
+    for (let i = 0; i < s.length; i++) {
+        let sum = 0;
+        for (let j = i; j < i + m; j++) {   // i(1) + m(2) = 3 so it will stop iterate when j is 2, so at index 1 it will stop at 2
+            sum += s[j];                   // it will count 2(j=1) and 1
+        }
+        if (sum === d) count++;
+    }
+    return count
 }
+
+// console.log(birthday([1,2,1,3,2],3,2))
+
+
+function divisibleSumPairs(n, k, ar) {
+    // Write your code here
+    let count = 0;
+    for (let i = 0; i < ar.length; i++) {
+        for (let j = i +1; j < ar.length; j++) {
+            if ((ar[i] + ar[j]) % k === 0) {
+                console.log(ar[i], ar[j])
+            }
+        }
+    }
+    return count
+}
+
+// console.log(divisibleSumPairs(6,3,[1,3,2,6,1,2]))
+
+
+function migratoryBirds(arr) {
+    // Write your code here
+    
+    
+}
+
+console.log(migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4]))
 
 
 
