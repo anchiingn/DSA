@@ -179,3 +179,30 @@ var isSameTree = function(p, q) {
 // const tree1 = arrayToTree([1, 2, 3]);
 // const tree2 = arrayToTree([1, 2, 4]);
 // console.log(isSameTree(tree1, tree2)); // Output: true
+
+
+
+var merge = function(intervals) {
+    intervals.sort((a,b) => a[0] - b[0])
+    let current = intervals[0]; // [1,3]
+    let result = [current]; // [[1,3]]
+
+    for (let i = 1; i < intervals.length; i++) {
+        const currRight = current[1]; // 3
+        const nextLeft = intervals[i][0];
+        const nextRight = intervals[i][1];
+
+        if (currRight >= nextLeft) {   // 3 >= 2
+            current[1] = Math.max(currRight, nextRight) //look for the biggest number for the right end of the pair
+                                                        //then update the right current to the biggest number
+        }
+        else {
+            result.push(intervals[i]); 
+            current = intervals[i]
+        }
+    }
+
+    return result
+};
+
+// console.log(merge([[1,3],[8,10], [9,11],[15,18],[2,6]]))
