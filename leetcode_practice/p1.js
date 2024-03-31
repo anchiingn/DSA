@@ -110,3 +110,72 @@ var longestCommonPrefix = function(strs) {
 
 // console.log(longestCommonPrefix(["flower","flow","fight"]))
 
+
+
+var lengthOfLastWord = function(s) {
+    s=s.trim().split(' ') //use trim to remove empty space and use split to put each words individual in an array
+   return s[s.length -1].length //return the lenght of the last letter
+    
+};
+
+// console.log(lengthOfLastWord("   fly me   to   the moon  "))
+
+
+
+function TreeNode(val) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
+}
+
+function arrayToTree(arr) {
+    if (!arr.length) return null;
+
+    const root = new TreeNode(arr[0]); //the first num of the array will be the root of the tree
+    const queue = [root];  // first part of the tree (root)
+    // console.log(queue)  // [ TreeNode { val: 1, left: null, right: null } ]
+
+    let i = 1; // since we know the root so we will skip the first num of the array, so we start at the next one so it be at index 1
+
+    while (i < arr.length) { //iterate throught the array 
+        const current = queue.shift(); 
+
+        if (arr[i] !== null) { // if the next index is not null
+            current.left = new TreeNode(arr[i]);  //then the left side of the current val will be at that index num
+            queue.push(current.left); // push this to the queue so we will have 
+        }
+
+        i++;
+
+        if (i < arr.length && arr[i] !== null) {
+            current.right = new TreeNode(arr[i]);
+            queue.push(current.right);
+
+        }
+
+        i++;
+    }
+
+    return root;
+}
+
+var isSameTree = function(p, q) {
+    if (!p && !q) {
+        return true; // Both trees are empty
+    }
+
+    if (!p || !q) {
+        return false; // One tree is empty, the other is not
+    }
+
+    if (p.val !== q.val) {
+        return false; // Values of current nodes are different
+    }
+
+    // Recursively check left and right subtrees
+    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+};
+
+// const tree1 = arrayToTree([1, 2, 3]);
+// const tree2 = arrayToTree([1, 2, 4]);
+// console.log(isSameTree(tree1, tree2)); // Output: true
