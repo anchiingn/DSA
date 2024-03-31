@@ -76,12 +76,12 @@ var romanToInt = function(s) {
     let output = 0
 
     for (let i = 0; i < s.length; i++) {
-       let romanLeft = symbols[s[i]];
-       let romanRight = symbols[s[i+1]];
+       let romanLeft = symbols[s[i]]; //the roman on the left, IV so it will be I
+       let romanRight = symbols[s[i+1]]; //the roman on the right , IV so it will be V
 
-       if (romanLeft < romanRight) {
-           output += romanRight - romanLeft
-           i++
+       if (romanLeft < romanRight) { // if left roman (I) is less than the right roman (V)
+           output += romanRight - romanLeft  //then we will take the right to minus the left, V - I = 5 -1 = 4
+           i++   // add one for index so that we move to the next roman, so that we will not check the right roman (V)
        }
        else {
         output += romanLeft
@@ -94,8 +94,19 @@ var romanToInt = function(s) {
 
 
 var longestCommonPrefix = function(strs) {
-    
+    if (strs.length === 1) return strs[0]; // check if there only one then return that word
+
+    let str = '';
+    for (let i = 0; i < strs[0].length; i++) { // this is to iterate each character in the word
+        for (let j =0; j < strs.length; j++) // this is to iterate each word in the strs
+        if (strs[0][i] !== strs[j][i]) { //compare the every character in the first word with the remaining chacracters of the remaining words
+            return str                   
+        }
+
+        str += strs[0][i]
+    }
+    return str
 };
 
-console.log(longestCommonPrefix(["flower","flow","flight"]))
+// console.log(longestCommonPrefix(["flower","flow","fight"]))
 
