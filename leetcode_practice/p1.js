@@ -206,3 +206,24 @@ var merge = function(intervals) {
 };
 
 // console.log(merge([[1,3],[8,10], [9,11],[15,18],[2,6]]))
+
+
+var isAnagram = function(s, t) {
+    if (s.length !== t.length) return false;
+    let anagram = {};
+
+    for (let i = 0; i < s.length; i++) {
+        anagram[s[i]] ? anagram[s[i]]++ :anagram[s[i]] = 1;
+    }
+    for (let i = 0; i < s.length; i++) {
+        anagram[t[i]] ? anagram[t[i]]-- :anagram[t[i]] = 1;
+    }
+
+    for (let char in anagram) {
+        if (anagram[char] !== 0) return false;
+    }
+    
+    return true
+};
+
+// console.log(isAnagram("anagram","nagaram"))
