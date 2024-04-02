@@ -208,22 +208,60 @@ var merge = function(intervals) {
 // console.log(merge([[1,3],[8,10], [9,11],[15,18],[2,6]]))
 
 
-var isAnagram = function(s, t) {
-    if (s.length !== t.length) return false;
-    let anagram = {};
+var isAnagram = function(word1, word2) {
+    // if (s.length !== t.length) return false;
+    // let anagram = {};
 
-    for (let i = 0; i < s.length; i++) {
-        anagram[s[i]] ? anagram[s[i]]++ :anagram[s[i]] = 1;
-    }
-    for (let i = 0; i < s.length; i++) {
-        anagram[t[i]] ? anagram[t[i]]-- :anagram[t[i]] = 1;
-    }
+    // for (let i = 0; i < s.length; i++) {
+    //     anagram[s[i]] ? anagram[s[i]]++ :anagram[s[i]] = 1;
+    // }
+    // for (let i = 0; i < s.length; i++) {
+    //     anagram[t[i]] ? anagram[t[i]]-- :anagram[t[i]] = 1;
+    // }
 
-    for (let char in anagram) {
-        if (anagram[char] !== 0) return false;
-    }
+    // for (let char in anagram) {
+    //     if (anagram[char] !== 0) return false;
+    // }
     
+    // return true
+    if (word1.length !== word2.length) return false;
+
+    let obj1 = {};
+    let obj2 = {};
+
+    for (let i = 0; i < word1.length; i++) {
+        obj1[word1[i]] ?obj1[word1[i]]++ : obj1[word1[i]] = 1;
+        obj2[word2[i]] ?obj2[word2[i]]++ : obj2[word2[i]] = 1;
+    }
+
+    for (let char in obj1, obj2) {
+        if (obj1[char] !== obj2[char]) {
+            return false
+        }
+    }
     return true
 };
 
 // console.log(isAnagram("anagram","nagaram"))
+
+
+var removeAnagrams = function(words) {
+    for (let i = 0; i < words.length-1; i++) { //when you iterate like i + 1, must -1 from it lenght so that it will not iterate the undifind 
+        let word1 = words[i].split('').sort().join('');
+        let word2 = words[i+1].split('').sort().join('');
+
+        if (word1 === word2) {
+            words.splice(i+1,1);
+            i--
+        } 
+    }
+    return words
+};
+
+// console.log(removeAnagrams(["abba","baba","bbaa","cd","cd"]))
+
+
+
+var percentageLetter = function(s, letter) {
+    
+};
