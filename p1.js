@@ -32,4 +32,4 @@ function factional (n) {
     return fac
 }
 
-console.log(factional(5))
+// console.log(factional(5))
