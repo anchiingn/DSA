@@ -259,3 +259,14 @@ var heightChecker = function(heights) {
     return count
 };
 // console.log(heightChecker([1,1,4,2,1,3]))
+
+
+var merge = function(nums1, m, nums2, n) {
+    let j = 0;
+    for (let i = m; i < nums1.length; i++) {
+        nums1[i] = nums2[j];
+        j++
+    }
+    nums1.sort((a,b) => a-b)
+};
+// console.log(merge([1,2,3,0,0,0], 3, [2,5,6],3))
