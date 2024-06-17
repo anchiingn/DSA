@@ -101,7 +101,13 @@ myTree.insert(27)
 myTree.insert(52)
 myTree.insert(82)
 
-console.log(myTree.DFS_inOrder())
+//       47
+//     /    \
+//    21    76
+//   / \    / \
+//  18 27  52 82
+
+console.log(myTree.BFS())
 
 
 

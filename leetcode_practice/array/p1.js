@@ -127,4 +127,135 @@ var smallestEqual = function(nums) {
     return min
 };
 
-console.log(smallestEqual([1,2,3,4,5,6,7,8,9,0]))
+// console.log(smallestEqual([1,2,3,4,5,6,7,8,9,0]))
+
+
+var countMatches = function(items, ruleKey, ruleValue) {
+    // let count = 0;
+    // for (let i = 0; i < items.length; i++) {
+    //     console.log(items[i][1])
+    //     if (ruleKey === 'type') {
+    //         if (ruleValue === items[i][1]) count++
+    //     }
+    //     else if (ruleKey === 'color') {
+    //         if (ruleValue === items[i][2]) count++
+    //     }
+    //     else count++
+    // }
+    // return count
+
+    let count =0;
+    for (let item of items) {
+        const [phone, color, name] = item;
+        if (ruleKey === 'type' && ruleValue === phone || ruleKey === 'color' && ruleValue === color || ruleKey === 'name' && ruleValue === name) {
+            count ++
+        }
+    }
+    return count
+};
+
+// console.log(countMatches([["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], "color", "silver"))
+
+function winner(andrea, maria, s) {
+    // Write your code here
+    let a = 0;
+    let m = 0;
+    
+    for (let i =0; i < andrea.length; i++) {
+        if (s === 'Odd' && i % 2 !== 0) {
+            console.log(andrea[i])
+                a += andrea[i] - maria[i]
+                m += maria[i] - andrea[i]
+        }
+        else if (s === 'Even' && i % 2 === 0) {
+                a += andrea[i] - maria[i]
+                m += maria[i] - andrea[i]
+        }
+    }
+    console.log(a, m)
+    if (a > m) return 'Andrea'
+    else return 'Maria'
+}
+
+// console.log(winner([1, 2, 3], [2, 1, 3], 'Odd'));  // Should tell who wins based on odd indices
+// console.log(winner([1, 2, 3], [2, 1, 3], 'Even'));
+
+var removeElement = function(nums, val) {
+    let arr = []
+    let count = 0
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== val) {
+            
+            count++;
+        }
+    }
+    return count
+};
+
+// console.log(removeElement([3,2,2,3],3))
+
+var merge = function(intervals) {
+    //[[1,3],[2,6],[15,18], [8,10]] 
+    intervals.sort((a,b) => a[0] - b[0])
+    //[[1,3],[2,6],[8,10],[15,18]] after sort
+
+    let curr = intervals[0]; 
+    //set the current to be the first arr [1,3]
+
+    let result = [curr]; 
+    // the first arr will be push in to result 
+
+    for (let i  = 1; i < intervals.length; i++) {
+        let currR = curr[1];
+        let nextL = intervals[i][0];
+        let nextR = intervals[i][1];
+
+        if (currR >= nextL) { 
+            // check if the second num in first arr is bigger or equal to the first num of second array
+            // if it is the reasign the second num of the current arr to be the biggest number
+            curr[1] = Math.max(currR, nextR)
+        }
+        else {
+            //if not then push that array to result
+            result.push(intervals[i]);
+            //and set the current array to be the next array to check on the rest
+            curr = intervals[i]
+        }
+    }
+ 
+}
+
+var countPairs = function(nums, target) {
+    let count = 0;
+    nums.sort((a,b) => a-b)
+    for (let i = 0; i < nums.length ; i++) {
+        for (let j = i +1; j < nums.length; j++) {
+            if (nums[i] + nums[j] < target) {
+                count++
+            }
+        }
+    }
+    return count
+};
+// console.log(countPairs([-1,1,2,3,1],2))
+
+var sortPeople = function(names, heights) {
+    const sort = names.map((name,i) => {
+        return {name:name, height: heights[i]}
+    })
+    sort.sort((a,b) => b.height-a.height);
+    return sort.map(obj => obj.name)
+};
+// console.log(sortPeople(["Mary","John","Emma"], [180,165,170]))
+
+var heightChecker = function(heights) {
+    const expect = [...heights].sort((a,b) => a-b);
+    let count = 0;
+    for (let i =0; i < heights.length; i++) {
+        if (heights[i] !== expect[i]) {
+            count++
+        } 
+    }
+    return count
+};
+// console.log(heightChecker([1,1,4,2,1,3]))
