@@ -248,6 +248,7 @@ var sortPeople = function(names, heights) {
 };
 // console.log(sortPeople(["Mary","John","Emma"], [180,165,170]))
 
+
 var heightChecker = function(heights) {
     const expect = [...heights].sort((a,b) => a-b);
     let count = 0;
