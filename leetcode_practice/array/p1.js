@@ -271,3 +271,15 @@ var merge = function(nums1, m, nums2, n) {
     nums1.sort((a,b) => a-b)
 };
 // console.log(merge([1,2,3,0,0,0], 3, [2,5,6],3))
+
+var isValid = function(s) {
+    let obj = {'(':')', '{':'}', '[':']'};
+    let stack = []; //last in first out
+
+    for (let char of s) {
+        if (obj[char]) stack.push(char); //check if there is key in obj
+        else if (obj[stack.pop()] !== char) return false //if not then take the lastest jey to compare the value to the char, if they not match then it is false
+     }
+    return stack.length === 0
+};
+// console.log(isValid('(]'))
