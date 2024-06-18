@@ -107,7 +107,9 @@ myTree.insert(82)
 //   / \    / \
 //  18 27  52 82
 
-console.log(myTree.BFS())
+//pre [ 47, 21, 18, 27, 76, 52, 82 ]
+
+console.log(myTree.DFS_inOrder())
 
 
 
