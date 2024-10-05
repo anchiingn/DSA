@@ -11,31 +11,7 @@ class BST {
         this.root = null
     }
 
-    insert(value) {
-        let newNode = new Node(value)
-        if (this.root === null)  this.root = newNode
-        
-        let temp = this.root;
-
-        while(true) {
-            if (newNode.value === temp.value) return undefined;
-            
-            if (newNode.value < temp.value) { //if the node is lest than the temp node, then the temp will 
-                if (temp.left === null) {
-                    temp.left = newNode
-                    return this
-                }
-                temp = temp.left
-            } else {
-                if (temp.right === null) {
-                    temp.right = newNode
-                    console.log(temp.right)
-                    return this
-                }
-                temp = temp.right
-            }
-        }
-    }
+    
 
     BFS () {
         let current = this.root;
@@ -109,7 +85,7 @@ myTree.insert(82)
 
 //pre [ 47, 21, 18, 27, 76, 52, 82 ]
 
-console.log(myTree.DFS_inOrder())
+console.log(myTree.DFS_postOrder())
 
 
 
