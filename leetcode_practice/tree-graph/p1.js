@@ -37,18 +37,37 @@ class BST {
         }
     }
 
-    
-
-    DFS_preOrder() {
+    BFS () {
+        let current = this.root;
+        let queue = [];  //first in first out
         let result = [];
-        function travesal(node) {
-            result.push(node.value)
-            if (node.left) travesal(node.left)
-            if (node.right) travesal(node.right)
+
+        queue.push(current);
+
+        while (queue.length) {  //if the lenght of queue is greater than zero
+            current = queue.shift(); //set the current node to be the first node in queue
+            result.push(current.value);  //put the current node in result
+            if (current.left) {  //check if there is left node, then push it to queue
+                queue.push(current.left)
+            }
+            if (current.right) { //check if there is right node, then push it to queue
+                queue.push(current.right)
+            }
         }
-        travesal(this.root)
+
         return result
     }
+
+    // DFS_preOrder() {
+    //     let result = [];
+    //     function travesal(node) {
+    //         result.push(node.value)
+    //         if (node.left) travesal(node.left)
+    //         if (node.right) travesal(node.right)
+    //     }
+    //     travesal(this.root)
+    //     return result
+    // }
 
     DFS_postOrder() {
         let result = [];
