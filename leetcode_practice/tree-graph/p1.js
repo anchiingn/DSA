@@ -37,26 +37,7 @@ class BST {
         }
     }
 
-    BFS () {
-        let current = this.root;
-        let queue = [];  //first in first out
-        let result = [];
-
-        queue.push(current);
-
-        while (queue.length) {  //if the lenght of queue is greater than zero
-            current = queue.shift(); //set the current node to be the first node in queue
-            result.push(current.value);  //put the current node in result
-            if (current.left) {  //check if there is left node, then push it to queue
-                queue.push(current.left)
-            }
-            if (current.right) { //check if there is right node, then push it to queue
-                queue.push(current.right)
-            }
-        }
-
-        return result
-    }
+    
 
     DFS_preOrder() {
         let result = [];
