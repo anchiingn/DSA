@@ -69,7 +69,16 @@ class BST {
         return result
     }
 
-   
+    DFS_postOrder() {
+        let result = [];
+        function travesal(node) {
+            if (node.left) travesal(node.left)
+            if (node.right) travesal(node.right)
+            result.push(node.value)
+        }
+        travesal(this.root)
+        return result
+    }
 
     DFS_inOrder() {
         let result = [];
