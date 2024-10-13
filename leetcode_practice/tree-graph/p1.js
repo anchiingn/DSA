@@ -58,16 +58,16 @@ class BST {
         return result
     }
 
-    // DFS_preOrder() {
-    //     let result = [];
-    //     function travesal(node) {
-    //         result.push(node.value)
-    //         if (node.left) travesal(node.left)
-    //         if (node.right) travesal(node.right)
-    //     }
-    //     travesal(this.root)
-    //     return result
-    // }
+    DFS_preOrder() {
+        let result = [];
+        function travesal(node) {
+            result.push(node.value)
+            if (node.left) travesal(node.left)
+            if (node.right) travesal(node.right)
+        }
+        travesal(this.root)
+        return result
+    }
 
     DFS_postOrder() {
         let result = [];
