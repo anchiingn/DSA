@@ -80,16 +80,16 @@ class BST {
         return result
     }
 
-    DFS_inOrder() {
-        let result = [];
-        function travesal(node) {
-            if (node.left) travesal(node.left)
-            result.push(node.value)
-            if (node.right) travesal(node.right)
-        }
-        travesal(this.root)
-        return result
-    }
+    // DFS_inOrder() {
+    //     let result = [];
+    //     function travesal(node) {
+    //         if (node.left) travesal(node.left)
+    //         result.push(node.value)
+    //         if (node.right) travesal(node.right)
+    //     }
+    //     travesal(this.root)
+    //     return result
+    // }
 }
 
 const myTree = new BST()
