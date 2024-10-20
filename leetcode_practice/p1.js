@@ -160,21 +160,21 @@ function arrayToTree(arr) {
 }
 
 var isSameTree = function(p, q) {
-    if (!p && !q) {
-        return true; // Both trees are empty
-    }
+//     if (!p && !q) {
+//         return true; // Both trees are empty
+//     }
 
-    if (!p || !q) {
-        return false; // One tree is empty, the other is not
-    }
+//     if (!p || !q) {
+//         return false; // One tree is empty, the other is not
+//     }
 
-    if (p.val !== q.val) {
-        return false; // Values of current nodes are different
-    }
+//     if (p.val !== q.val) {
+//         return false; // Values of current nodes are different
+//     }
 
-    // Recursively check left and right subtrees
-    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
-};
+//     // Recursively check left and right subtrees
+//     return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+// };
 
 // const tree1 = arrayToTree([1, 2, 3]);
 // const tree2 = arrayToTree([1, 2, 4]);
