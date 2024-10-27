@@ -172,7 +172,7 @@ var isSameTree = function(p, q) {
         return false; // Values of current nodes are different
     }
 
-    Recursively check left and right subtrees
+    // Recursively check left and right subtrees
     return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 };
 
