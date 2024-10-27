@@ -261,7 +261,3 @@ var removeAnagrams = function(words) {
 // console.log(removeAnagrams(["abba","baba","bbaa","cd","cd"]))
 
 
-
-var percentageLetter = function(s, letter) {
-    
-};
