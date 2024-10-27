@@ -137,24 +137,24 @@ function arrayToTree(arr) {
 
     let i = 1; // since we know the root so we will skip the first num of the array, so we start at the next one so it be at index 1
 
-    // while (i < arr.length) { //iterate throught the array 
-    //     const current = queue.shift(); 
+    while (i < arr.length) { //iterate throught the array 
+        const current = queue.shift(); 
 
-    //     if (arr[i] !== null) { // if the next index is not null
-    //         current.left = new TreeNode(arr[i]);  //then the left side of the current val will be at that index num
-    //         queue.push(current.left); // push this to the queue so we will have 
-    //     }
+        if (arr[i] !== null) { // if the next index is not null
+            current.left = new TreeNode(arr[i]);  //then the left side of the current val will be at that index num
+            queue.push(current.left); // push this to the queue so we will have 
+        }
 
-    //     i++;
+        i++;
 
-    //     if (i < arr.length && arr[i] !== null) {
-    //         current.right = new TreeNode(arr[i]);
-    //         queue.push(current.right);
+        if (i < arr.length && arr[i] !== null) {
+            current.right = new TreeNode(arr[i]);
+            queue.push(current.right);
 
-    //     }
+        }
 
-    //     i++;
-    // }
+        i++;
+    }
 
     return root;
 }
