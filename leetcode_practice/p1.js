@@ -205,7 +205,7 @@ var merge = function(intervals) {
     return result
 };
 
-console.log(merge([[1,3],[8,10], [9,11],[15,18],[2,6]]))
+// console.log(merge([[1,3],[8,10], [9,11],[15,18],[2,6]]))
 
 
 var isAnagram = function(word1, word2) {
