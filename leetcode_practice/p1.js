@@ -209,21 +209,21 @@ var merge = function(intervals) {
 
 
 var isAnagram = function(word1, word2) {
-    // if (s.length !== t.length) return false;
-    // let anagram = {};
+    if (s.length !== t.length) return false;
+    let anagram = {};
 
-    // for (let i = 0; i < s.length; i++) {
-    //     anagram[s[i]] ? anagram[s[i]]++ :anagram[s[i]] = 1;
-    // }
-    // for (let i = 0; i < s.length; i++) {
-    //     anagram[t[i]] ? anagram[t[i]]-- :anagram[t[i]] = 1;
-    // }
+    for (let i = 0; i < s.length; i++) {
+        anagram[s[i]] ? anagram[s[i]]++ :anagram[s[i]] = 1;
+    }
+    for (let i = 0; i < s.length; i++) {
+        anagram[t[i]] ? anagram[t[i]]-- :anagram[t[i]] = 1;
+    }
 
-    // for (let char in anagram) {
-    //     if (anagram[char] !== 0) return false;
-    // }
+    for (let char in anagram) {
+        if (anagram[char] !== 0) return false;
+    }
     
-    // return true
+    return true
     if (word1.length !== word2.length) return false;
 
     let obj1 = {};
