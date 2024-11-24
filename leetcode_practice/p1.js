@@ -242,7 +242,7 @@ var isAnagram = function(word1, word2) {
     return true
 };
 
-console.log(isAnagram("anagram","nagaram"))
+// console.log(isAnagram("anagram","nagaram"))
 
 
 var removeAnagrams = function(words) {
