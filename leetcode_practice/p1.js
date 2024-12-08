@@ -245,18 +245,18 @@ var isAnagram = function(word1, word2) {
 // console.log(isAnagram("anagram","nagaram"))
 
 
-var removeAnagrams = function(words) {
-    for (let i = 0; i < words.length-1; i++) { //when you iterate like i + 1, must -1 from it lenght so that it will not iterate the undifind 
-        let word1 = words[i].split('').sort().join('');
-        let word2 = words[i+1].split('').sort().join('');
+// var removeAnagrams = function(words) {
+//     for (let i = 0; i < words.length-1; i++) { //when you iterate like i + 1, must -1 from it lenght so that it will not iterate the undifind 
+//         let word1 = words[i].split('').sort().join('');
+//         let word2 = words[i+1].split('').sort().join('');
 
-        if (word1 === word2) {
-            words.splice(i+1,1);
-            i--
-        } 
-    }
-    return words
-};
+//         if (word1 === word2) {
+//             words.splice(i+1,1);
+//             i--
+//         } 
+//     }
+//     return words
+// };
 
 // console.log(removeAnagrams(["abba","baba","bbaa","cd","cd"]))
 
