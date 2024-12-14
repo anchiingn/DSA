@@ -16,7 +16,7 @@ console.log(divisibleSumPairs(6,3,[1,3,2,6,1,2]))
 
 
 function matchingStrings(strings, queries) {
-    Write your code here
+    // Write your code here
     const arr = [];
 
     for (let i = 0; i < queries.length; i++) {
