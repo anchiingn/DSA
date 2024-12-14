@@ -258,6 +258,6 @@ var removeAnagrams = function(words) {
     return words
 };
 
-console.log(removeAnagrams(["abba","baba","bbaa","cd","cd"]))
+// console.log(removeAnagrams(["abba","baba","bbaa","cd","cd"]))
 
 
