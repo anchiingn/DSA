@@ -12,7 +12,7 @@ function divisibleSumPairs(n, k, ar) {
     return count
 }
 
-// console.log(divisibleSumPairs(6,3,[1,3,2,6,1,2]))
+console.log(divisibleSumPairs(6,3,[1,3,2,6,1,2]))
 
 
 function matchingStrings(strings, queries) {
