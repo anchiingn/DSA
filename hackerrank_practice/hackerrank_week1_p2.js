@@ -48,4 +48,4 @@ function findMedian(arr) {
     return arr[median]
 }
 
-console.log(findMedian([0,1,2,3,4,5,6,7]))
+// console.log(findMedian([0,1,2,3,4,5,6,7]))
