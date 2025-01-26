@@ -34,7 +34,7 @@ function matchingStrings(strings, queries) {
     return arr
 }   
 
-console.log(matchingStrings(['ab','ab','abc'], ['ab', 'abc', 'dc']))
+// console.log(matchingStrings(['ab','ab','abc'], ['ab', 'abc', 'dc']))
 
 
 function findMedian(arr) {
