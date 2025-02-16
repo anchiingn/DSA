@@ -45,7 +45,7 @@ function findMedian(arr) {
     if (length % 2 === 0) {
         return (arr[median -1 ] + arr[median])/2
     } 
-    // return arr[median]
+    return arr[median]
 }
 
 console.log(findMedian([0,1,2,3,4,5,6,7,8]))
