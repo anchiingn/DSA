@@ -15,7 +15,7 @@ var getConcatenation = function (nums) {
     return nums
 };
 
-
+//vv
 var buildArray = function (nums) {
     const ans = [...nums] // make a copy of new array
     for (let i = 0; i < nums.length; i++) {
