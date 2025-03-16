@@ -24,7 +24,7 @@ var buildArray = function (nums) {
     return ans
 };
 
-//another solution it that use .map(), because .map will create and return the new array
+another solution it that use .map(), because .map will create and return the new array
 
 // console.log(buildArray([0,2,1,5,3,4]))
 
